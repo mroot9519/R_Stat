@@ -1,0 +1,24 @@
+In the MechaCar regression, known as 'challenge_model' within the R script, 5 varaibles were tested to determine which had the most impact on their vehicle's miles-per-gallon rate. Two variables had p-values below the 5% threshold: vehicle length and ground clearance.
+
+The model's overall p-value is 5.35 X 10^-11, well below 5%. Given that fact, we can reject the null hypothesis that the slope of the model is 0.
+
+The model is fairly robust as it has an R-squared value of 71.5%, indicating that it would accurately predict 71% and has a p-value of 5.35 X 10^-11, which is significantly lower than the pre-established 5% threshold.
+
+
+COILS__________
+
+In compelting a general statistical analysis of the pounds-per-square-inch variable in the coils dataset, a few observations were made:
+  1. The variable is not normally distrubted as indicated by its near 0 p-value (-2.26 * 10^16)
+  2. The variance of the psi variable sits below the 100 psi manufacturing threshold.
+  
+Additionall, a one-sample t-test was condiucted to determine if a sample dataset of coils data had a mean that was stiasitically idffferent from that of the mean. The test yeilded a p-value of .24, indicating there was not significant enough evidence to reject the null hypohthesis.
+
+
+
+STUDY DESIGN____________
+
+A study comparing MechCar's performance versus competitors would need to identify in which capacity do youw ant to compare the vehicles (i.e. mpg).
+
+Once a variable, or a few, has been selected, I would clean up the data sets. ensure that the critical data have proper data types for statsitical calculations and comparisons. We may need to adjust the data by adding a column if certain information is not given but can be calculated abased on the data that was given. For instance, if we are interested in mpg and one data set includes vehicle data for miles and total gallons of gasonliens used, we would add a column that calulcated miles per gallon.
+
+Next we could conduct a multiple linear regression model to determine which variables most signifcantly affect each brand's mpg results. In doing so, we can compare the p-values and correlations of the individual variables against mpg to see how the different brands' vehicles operate.
