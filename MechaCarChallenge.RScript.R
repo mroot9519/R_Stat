@@ -9,8 +9,13 @@ challenge_model <- lm(`mpg` ~ `vehicle length` + `vehicle weight` + `spoiler ang
 coils_table <- read.csv(file='Suspension_Coil.csv', check.names=F, stringsAsFactors = F)
 ggplot(coils_table, aes(x=PSI)) + geom_density() #graphs distribution
 shapiro.test(coils_table$PSI) #test for normality
-coils_summary <- summary(coils_table$PSI)
-sd(coils_table$PSI)
-var(coils_table$PSI)
+#coil summary stats
+coil_stats <- matrix(c(mean(coils_table$PSI), median(coils_table$PSI), sd(coils_table$PSI), var(coils_table$PSI)),ncol=1, byrow=TRUE)
+colnames(coil_stats) <- "PSI"
+rownames(coil_stats) <- c("mean","median","standard deviation", "variance")
+coil_stats <- as.table(coil_stats)
+coil_stats
+
+#sampel test
 sample_coils <- coils_table %>% sample_n(50)
-t.test(log10(sample_coils$PSI),mu=mean(log10(coils_table$PSI)))
+t.test(log10(sample_coils$PSI),mu=1500)
