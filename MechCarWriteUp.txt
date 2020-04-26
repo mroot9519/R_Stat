@@ -11,7 +11,7 @@ In compelting a general statistical analysis of the pounds-per-square-inch varia
   1. The variable is not normally distrubted as indicated by its near 0 p-value (-2.26 * 10^16)
   2. The variance of the psi variable sits below the 100 psi manufacturing threshold.
   
-Additionall, a one-sample t-test was condiucted to determine if a sample dataset of coils data had a mean that was stiasitically idffferent from that of the mean. The test yeilded a p-value of .24, indicating there was not significant enough evidence to reject the null hypohthesis.
+Additionall, a one-sample t-test was condiucted to determine if a sample dataset of coils data had a mean that was not statisitically different from that of the mean. The test yeilded a p-value of .772, indicating there was not significant enough evidence to reject the null hypohthesis.
 
 
 

@@ -1,4 +1,4 @@
-challenge_tabe <- read.csv(file='MechaCar_mpg.csv', check.names=F, stringsAsFactors = F)
+challenge_table <- read.csv(file='MechaCar_mpg.csv', check.names=F, stringsAsFactors = F)
 challenge_matrix <- as.matrix(challenge_table[,c('vehicle length','vehicle weight','spoiler angle','ground clearance','AWD','mpg')])
 cor(challenge_matrix)
 lm(`mpg` ~ `vehicle length` + `vehicle weight` + `spoiler angle` + `ground clearance` + `AWD`, data = challenge_table)
@@ -18,4 +18,4 @@ coil_stats
 
 #sampel test
 sample_coils <- coils_table %>% sample_n(50)
-t.test(log10(sample_coils$PSI),mu=1500)
+t.test(sample_coils$PSI,mu=mean(coils_table$PSI))
