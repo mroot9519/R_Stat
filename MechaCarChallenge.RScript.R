@@ -18,4 +18,4 @@ coil_stats
 
 #sampel test
 sample_coils <- coils_table %>% sample_n(50)
-t.test(sample_coils$PSI,mu=mean(coils_table$PSI))
+t.test(sample_coils$PSI,mu=1500)
